@@ -8,6 +8,11 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: OVH 
+
+    env:
+      HOST: ${{ vars.HOST }}
+      USER: ${{ vars.USER }}
 
     steps:
       - name: Checkout repository
@@ -35,6 +40,4 @@ jobs:
             docker compose down
             docker compose up -d --build
           EOF
-    env:
-      HOST: ${{ vars.HOST }}
-      USER: ${{ vars.USER }}
+
