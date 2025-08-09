@@ -1,0 +1,40 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ env.HOST }} >> ~/.ssh/known_hosts
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Sync files to server
+        run: |
+          rsync -az --delete \
+            -e "ssh -i ~/.ssh/id_ed25519" \
+            ./ ${{ env.USER }}@${{ env.HOST }}:/home/${{ env.USER }}/vue-cv/
+
+      - name: Deploy with Docker Compose
+        run: |
+          ssh -i ~/.ssh/id_ed25519 ${{ env.USER }}@${{ env.HOST }} << 'EOF'
+            mv ~/vue-cv /opt/docker/deploy/web-thomasfrancois-cv && cd /opt/docker/deploy/web-thomasfrancois-cv
+            docker compose down
+            docker compose up -d --build
+          EOF
+    env:
+      HOST: ${{ vars.HOST }}
+      USER: ${{ vars.USER }}
