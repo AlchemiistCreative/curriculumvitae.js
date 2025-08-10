@@ -12,10 +12,10 @@ export const profile = {
   summary:
   "Âgé de 27 ans et actif dans l’ICT, je suis un administrateur système et réseau passionné, motivé par la résolution de problèmes et l’acquisition continue de nouvelles compétences. J’ai un intérêt marqué pour l’automatisation (CI/CD, Ansible, Chef, Terraform, Bash, PowerShell), le tooling et la conception d’architectures résilientes.",
   skills: [
-    "Linux (RHEL/Rocky, Debian)", "Windows Server", "Active Directory",
-    "Ansible", "Terraform", "GCP", "CI/CD (Jenkins, GitHub Actions)",
+    "Linux (RHEL Based)", "Chaos Engineering", "Windows Server", "Active Directory",
+    "Ansible", "Terraform", "GCP", "CI/CD (Jenkins, Gitlab)",
     "Observabilité (Grafana, Prometheus)", "RabbitMQ",
-    "Architecture système & réseau", "BGP/MPLS", "Automatisation", "Scripting (Bash, PowerShell)", "Jira"
+    "Architecture système & réseau", "Automatisation", "Scripting (Bash, PowerShell)", "Jira"
   ],
   languages: [
     { name: "Français", level: "C2 (natif)" },
@@ -30,10 +30,10 @@ export const profile = {
         "Polyvalent et autonome, j'interviens sur un large périmètre technique, combinant support N2/N3, intégration de solutions et MCO d’environnements critiques (web, mail, télécom).",
       bullets: [
         "Maintien en conditions opérationnelles d’un environnement Private Cloud (MPLS L3VPN, VRF, QinQ, Housing et Virtualisation)",
-        "Analyse et automatisation de processus opérationnels (Ansible, scripts)",
+        "Analyse et automatisation de processus opérationnels (Ansible, Scripting Bash & Powershell)",
+        "Amélioration du monitoring en place (Zabbix)", 
         "Gestion des serveurs web et mail (mutualisés / dédiés)",
-
-        "Support technique N2/N3 et amélioration continue"
+        "Support technique N2/N3"
       ]
     },
     {
@@ -51,7 +51,6 @@ export const profile = {
         "CI/CD Jenkins, déploiements via Ansible",
         "Dashboard pour bypasser Jira en tant que front-end",
         "Administration Linux (support & maintenance — CentOS / Rocky Linux)",
-
       ]
     },
     {
@@ -59,9 +58,9 @@ export const profile = {
       company: "Ulysse Group by DSTNY — Mons, Belgique",
       period: "Jan. 2020 — Juin 2022",
       description:
-        "Support N1/N2 orienté ITIL en production ; contribution au MCO de l’infrastructure réseau et système.",
+        "Première expérience dans un environnement de production, où j’ai assuré un support technique N1/N2 dans le respect des bonnes pratiques ITIL, tout en contribuant au maintien en conditions opérationnelles de l’infrastructure.",
       bullets: [
-        "MCO du datacenter",
+        "MCO des datacenters",
         "Gestion des serveurs web et mail (mutualisés / dédiés)",
         "Support technique N1/N2",
         "Administration système et réseau (équipements télécoms, Linux & Windows)"

@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: web-thomasfrancois-cv
+    container_name: thomasfrancois-cv
     restart: always
     labels:
       - "traefik.enable=true"

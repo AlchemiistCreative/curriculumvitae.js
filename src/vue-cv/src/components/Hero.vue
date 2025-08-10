@@ -6,6 +6,7 @@
       <h1>{{ profile.name }}</h1>
       <p class="title">{{ profile.title }}</p>
       <p class="summary">{{ profile.summary }}</p>
+      <p class="summary">{{ profile.location }}</p>
       <nav class="links">
         <a :href="profile.links.email">Email</a>
         <a :href="profile.links.github" target="_blank">GitHub</a>

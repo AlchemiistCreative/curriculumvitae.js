@@ -120,12 +120,12 @@ h2 { margin-top: 32px; text-align: center; }
 }
 
 /* Colonne contenu */
-.header{ font-weight: 600; margin-bottom: 8px; text-align: center; }
+.header{ font-weight: 600; margin-bottom: 20px; text-align: center; }
 
 .desc{
   font-size: 0.95rem;
   line-height: 1.6;
-  margin: 6px auto 0;
+  margin: 6px auto 20px;
   padding: 10px 12px;
   max-width: 80ch;
   text-align: center;
