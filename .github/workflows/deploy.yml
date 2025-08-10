@@ -31,12 +31,12 @@ jobs:
         run: |
           rsync -az --delete \
             -e "ssh -i ~/.ssh/id_ed25519" \
-            ./ ${{ env.USER }}@${{ env.HOST }}:/home/${{ env.USER }}/vue-cv/
+            ./ ${{ env.USER }}@${{ env.HOST }}:/opt/docker/deploy/web-thomasfrancois-cv
 
       - name: Deploy with Docker Compose
         run: |
           ssh -i ~/.ssh/id_ed25519 ${{ env.USER }}@${{ env.HOST }} << 'EOF'
-            mv -f ~/vue-cv /opt/docker/deploy/web-thomasfrancois-cv && cd /opt/docker/deploy/web-thomasfrancois-cv
+            cd /opt/docker/deploy/web-thomasfrancois-cv
             docker compose down
             docker compose up -d --build
           EOF
