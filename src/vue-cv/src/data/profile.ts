@@ -15,7 +15,7 @@ export const profile = {
     "Linux (RHEL Based)", "Chaos Engineering", "Windows Server", "Active Directory",
     "Ansible", "Terraform", "GCP", "CI/CD (Jenkins, Gitlab)",
     "Observabilité (Grafana, Prometheus)", "RabbitMQ",
-    "Architecture système & réseau", "Automatisation", "Scripting (Bash, PowerShell)", "Jira"
+    "Architecture système & réseau", "Automatisation", "Scripting (Bash, PowerShell)", "Jira", "Cisco", "Vyos/FRR"
   ],
   languages: [
     { name: "Français", level: "C2 (natif)" },
@@ -68,6 +68,12 @@ export const profile = {
     }
   ],
   projects: [
+      {
+      name: "EVE-NG MPLS L3VPN LAB - Ansible",
+      url: "https://github.com/AlchemiistCreative/mpls-l3vpn-ansible-lab",
+      tags: ["Network Architecture", "Vyos/FRR", "Ansible"],
+      description: "Automatisation du déploiment d'un lab MPLS L3VPN Multi-tenant, utilisé comme base pour faire des labs systèmes"
+    },
     {
       name: "EthicalInsight — AD Centralized Audit",
       url: "https://github.com/AlchemiistCreative/EthicalInsight",

@@ -54,37 +54,38 @@ onMounted(() => {
 });
 </script>
 
+
 <style scoped>
-/* Variables locales (pas de :root si tu préfères) */
 .timeline {
   --rail-width: 120px;     /* largeur colonne gauche */
   --line-width: 2px;       /* épaisseur de la barre */
-  --line-color: #e5e7eb22; /* couleur de la barre */
+  --line-color: var(--timeline-color); /* utilise la variable globale */
   --gap: 18px;             /* espace entre rail et contenu */
   --dot-size: 12px;        /* taille du marqueur */
 }
 
-h2 { margin-top: 32px; text-align: center; }
+h2 {
+  margin-top: 32px;
+  text-align: center;
+}
 
-/* Barre verticale continue dessinée sur la UL */
-.timeline{
+.timeline {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 22px 0 0;
 }
-.timeline::before{
-  content:"";
-  position:absolute;
+.timeline::before {
+  content: "";
+  position: absolute;
   left: calc(var(--rail-width) / 2 - var(--line-width) / 2);
-  top: 0;
-  bottom: 0;                /* ligne continue (pas de coupure) */
+  top: 1%;
+  bottom: 0;
   width: var(--line-width);
   background: var(--line-color);
 }
 
-/* Grille 2 colonnes : rail fixe + contenu */
-.timeline-item{
+.timeline-item {
   display: grid;
   grid-template-columns: var(--rail-width) 1fr;
   column-gap: var(--gap);
@@ -92,17 +93,15 @@ h2 { margin-top: 32px; text-align: center; }
   margin: 28px 0;
 }
 
-/* Colonne rail */
-.rail{
+.rail {
   position: relative;
   min-height: var(--dot-size);
 }
 
-/* Gros marqueur, aligné sur la 1re ligne du titre */
-.marker{
+.marker {
   position: absolute;
   left: calc(50% - var(--dot-size)/2);
-  top: 0.55em;              /* ajuste 0.5–0.65em selon la police */
+  top: 0.55em;
   width: var(--dot-size);
   height: var(--dot-size);
   border-radius: 50%;
@@ -110,19 +109,22 @@ h2 { margin-top: 32px; text-align: center; }
   box-shadow: 0 0 0 3px rgba(255,255,255,0.05);
 }
 
-/* Période sous le marqueur, dans le rail */
-.period{
+.period {
   display: block;
-  margin-top: calc(var(--dot-size) + 8px);
+  /*margin-top: calc(var(--dot-size) + 8px);*/
   font-size: 0.9rem;
   opacity: 0.75;
+  margin-right: 100px;
   text-align: center;
 }
 
-/* Colonne contenu */
-.header{ font-weight: 600; margin-bottom: 20px; text-align: center; }
+.header {
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-.desc{
+.desc {
   font-size: 0.95rem;
   line-height: 1.6;
   margin: 6px auto 20px;
@@ -134,41 +136,41 @@ h2 { margin-top: 32px; text-align: center; }
   border-radius: 8px;
 }
 
-.desc + .bullets{
+.desc + .bullets {
   margin-top: 12px;
 }
 
-/* Puces propres (natives désactivées) */
-.bullets{
+.bullets {
   list-style: none;
   margin: 0 auto;
   padding: 0;
   max-width: 80ch;
   text-align: left;
 }
-.bullets > li{
+.bullets > li {
   position: relative;
   margin: 6px 0;
   padding-left: 16px;
 }
-.bullets > li::before{
-  content:"";
-  position:absolute;
-  left:0; top:.62em;
-  width:6px; height:6px;
-  border-radius:50%;
+.bullets > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
   background: currentColor;
 }
 
-/* Séparateur doux entre items (optionnel) */
-.timeline-item + .timeline-item{
+.timeline-item + .timeline-item {
   padding-top: 18px;
   border-top: 1px dashed var(--line-color);
 }
 
-/* Responsive */
-@media (max-width: 700px){
-  .timeline{ --rail-width: 88px; --gap: 14px; }
-  .period{ font-size: .85rem; }
+@media (max-width: 700px) {
+  .timeline { --rail-width: 88px; --gap: 14px; }
+  .period { font-size: .85rem; }
 }
+
 </style>
