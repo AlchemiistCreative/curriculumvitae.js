@@ -36,7 +36,7 @@ jobs:
       - name: Deploy with Docker Compose
         run: |
           ssh -i ~/.ssh/id_ed25519 ${{ env.USER }}@${{ env.HOST }} << 'EOF'
-            mv ~/vue-cv /opt/docker/deploy/web-thomasfrancois-cv && cd /opt/docker/deploy/web-thomasfrancois-cv
+            mv -f ~/vue-cv /opt/docker/deploy/web-thomasfrancois-cv && cd /opt/docker/deploy/web-thomasfrancois-cv
             docker compose down
             docker compose up -d --build
           EOF
