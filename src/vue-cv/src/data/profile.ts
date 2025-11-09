@@ -100,11 +100,11 @@ export const profile = {
   ],
   projects: [
     {
-      name: "OpenHVX",
+      name: "OpenHVX - IaaS platform for Hyper-V",
       url: "https://github.com/openhvx",
       tags: ["IaaS", "Virtualisation", "Hyper‑V", "Node.js"],
       description:
-        "IaaS platform pour Hyper-v, API First, Agent-Based, multi-tenant",
+        "Plateforme IaaS pour Hyper-v, API First, Agent-Based, multi-tenant",
     },
     {
       name: "EVE-NG MPLS L3VPN LAB - Ansible",
