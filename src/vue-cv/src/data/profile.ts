@@ -102,7 +102,7 @@ export const profile = {
     {
       name: "OpenHVX",
       url: "https://github.com/openhvx",
-      tags: ["IaaS", "Virtualisation", "Hyper‑V", "PowerShell", "Node.js"],
+      tags: ["IaaS", "Virtualisation", "Hyper‑V", "Node.js"],
       description:
         "IaaS platform pour Hyper-v, API First, Agent-Based, multi-tenant",
     },
