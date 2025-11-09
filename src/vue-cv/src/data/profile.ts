@@ -1,5 +1,3 @@
-
-j'veux ajouté mon travail sur openhvx dans mes experiences
 // src/data/profile.ts
 export const profile = {
   name: "Thomas François",
@@ -12,7 +10,7 @@ export const profile = {
     linkedin: "https://www.linkedin.com/in/thomasfrancois-sv",
   },
   summary:
-    "Âgé de 27 ans et actif dans l’ICT, je suis un administrateur système et réseau passionné, motivé par la résolution de problèmes et l’acquisition continue de nouvelles compétences. J’ai un intérêt marqué pour l’automatisation (CI/CD, Ansible, Chef, Terraform, Bash, PowerShell), le tooling et la conception d’architectures résilientes.",
+    "Âgé de 28 ans et actif dans l’ICT, je suis un administrateur système et réseau passionné, motivé par la résolution de problèmes et l’acquisition continue de nouvelles compétences. J’ai un intérêt marqué pour l’automatisation (CI/CD, Ansible, Chef, Terraform, Bash, PowerShell), le tooling et la conception d’architectures résilientes.",
   skills: [
     "Linux (RHEL Based)",
     "Chaos Engineering",
@@ -36,9 +34,6 @@ export const profile = {
     { name: "Anglais", level: "B2" },
   ],
   experience: [
-
-
-    
     {
       role: "System & Network Administrator",
       company: "DSTNY — Zaventem, Belgique",
@@ -51,26 +46,26 @@ export const profile = {
         "Amélioration du monitoring en place (Zabbix)",
         "Gestion des serveurs web et mail (mutualisés / dédiés)",
         "Support technique N2/N3",
-        "Mise en place de stratégie de backup"
+        "Mise en place de stratégie de backup",
       ],
     },
 
-  {
-    role: "Founder",
-    company: "OpenHVX — Namur, Belgique",
-    period: "Mars 2025 — présent",
-    description:
-      "Créateur et mainteneur principal du projet open-source OpenHVX, une plateforme IaaS moderne dédiée à Hyper-V. Le projet vise à offrir une alternative légère à SCVMM et autres solutions propriétaires, avec une approche API-First, orientée multi-tenant et automatisable.",
-    bullets: [
-      "Conception de l’architecture multi-services (API Gateway, Auth, Controller, Quota Service, WS-Broker)",
-      "Développement de l’agent Go pour l’orchestration Hyper-V via PowerShell (création, gestion et suppression de VMs, cloud-init, quotas, etc.)",
-      "Développement du backend (Node.js/Express) et du frontend (Vue 3 + Naive UI)",
-      "Mise en place de la pipeline CI/CD (GitHub Actions, tests, build, déploiement multi-conteneurs)",
-      "Intégration de RabbitMQ, Traefik, MongoDB, et Docker/Podman Compose pour l’infrastructure applicative",
-      "Gestion du multi-tenant avec isolation logique, quotas et console série isolée",
-      "Documentation technique (VitePress, GitHub Pages) et gestion de la communauté open-source (PRs, issues, roadmap)",
-    ],
-  },
+    {
+      role: "Founder",
+      company: "OpenHVX — Namur, Belgique",
+      period: "Mars 2025 — présent",
+      description:
+        "Créateur et mainteneur principal du projet open-source OpenHVX, une plateforme IaaS moderne dédiée à Hyper-V. Le projet vise à offrir une alternative légère à SCVMM et autres solutions propriétaires, avec une approche API-First, orientée multi-tenant et automatisable.",
+      bullets: [
+        "Conception de l’architecture multi-services (API Gateway, Auth, Controller, Quota Service, WS-Broker)",
+        "Développement de l’agent Go pour l’orchestration Hyper-V via PowerShell (création, gestion et suppression de VMs, cloud-init, quotas, etc.)",
+        "Développement du backend (Node.js/Express) et du frontend (Vue 3 + Naive UI)",
+        "Mise en place de la pipeline CI/CD (GitHub Actions, tests, build, déploiement multi-conteneurs)",
+        "Intégration de RabbitMQ, Traefik, MongoDB, et Docker/Podman Compose pour l’infrastructure applicative",
+        "Gestion du multi-tenant avec isolation logique, quotas et console série isolée",
+        "Documentation technique (VitePress, GitHub Pages) et gestion de la communauté open-source (PRs, issues, roadmap)",
+      ],
+    },
 
     {
       role: "System Administrator",
