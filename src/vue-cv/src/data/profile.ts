@@ -57,7 +57,7 @@ export const profile = {
       description:
         "Créateur et mainteneur principal du projet open-source OpenHVX, une plateforme IaaS moderne dédiée à Hyper-V. Le projet vise à offrir une alternative légère à SCVMM et autres solutions propriétaires, avec une approche API-First, orientée multi-tenant et automatisable.",
       bullets: [
-        "Conception de l’architecture multi-services (API Gateway, Auth, Controller, Quota Service, WS-Broker)",
+        "Conception de l’architecture (API Gateway, Auth, Controller, Quota Service, WS-Broker)",
         "Développement de l’agent Go pour l’orchestration Hyper-V via PowerShell (création, gestion et suppression de VMs, cloud-init, quotas, etc.)",
         "Développement du backend (Node.js/Express) et du frontend (Vue 3 + Naive UI)",
         "Mise en place de la pipeline CI/CD (GitHub Actions, tests, build, déploiement multi-conteneurs)",
